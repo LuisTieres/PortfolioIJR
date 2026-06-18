@@ -76,3 +76,36 @@ p {
     text-align: center;
     color:#ffffff;
 }
+
+.projetos_sec {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 80vh;
+    padding: 20px;
+    gap: 30px;
+    font-size: 24px;
+    font-weight: bold;
+    color: #ffffff;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+.projetos-title{
+    font-size: 32px;
+    margin-bottom: 20px;
+    text-align: center;
+    color:#ffffff;
+}
+.proj-list{
+    text-align: left;
+    max-width: 600px;
+    margin: 0 auto;
+    color:#ffffff;
+}
+
+.proj-tech{
+    font-style: italic;
+    color:#ffffff;
+}

@@ -1,20 +1,39 @@
 body {
   margin: 0;
   padding: 0;
-  font-family: Arial, sans-serif;
-  line-height: 1.5;
+  font-family: Inter, Arial, sans-serif;
+  line-height: 1.6;
   background-color: #054968;
-  color: #333;
-  
+  color: #f5f5f5;
+}
+
+* {
+  box-sizing: border-box;
 }
 
 main {
-  max-width: 800px;
-  margin: 40px auto;
-  padding: 20px;
-  background-color: #fff;
-  border-radius: 8px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  width: min(1100px, 100%);
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+.container {
+  width: min(1100px, 100%);
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.site-header {
+  background: rgba(0, 0, 0, 0.15);
+  backdrop-filter: blur(10px);
+  padding: 16px 0;
+}
+
+.logo {
+  font-size: 1.2rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  color: #ffffff;
 }
 
 h1 {
@@ -26,86 +45,116 @@ p {
   margin-bottom: 1rem;
 }
 
-.sobre {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 80vh;
-    padding: 20px;
-    gap: 30px;
-    font-size: 24px;
-    font-weight: bold;
-    color: #ffffff;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    text-align: center;
-    
-}
-.sobre-texto {
-    max-width: 600px;
-    color:white;
-    
-}
-
-.resumo {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    min-height: 80vh;
-    padding: 20px;
-    gap: 30px;
-    font-size: 24px;
-    font-weight: bold;
-    color: #ffffff;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    text-align: center;
-}
-
-.resumo p {
-    max-width: 600px;
-    font-size: 18px;
-    text-align: justify;
-    color:#ffffff;
-}
-
-.resumo-title{
-    font-size: 32px;
-    margin-bottom: 20px;
-    text-align: center;
-    color:#ffffff;
-}
-
+.sobre,
+.resumo,
 .projetos_sec {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    min-height: 80vh;
-    padding: 20px;
-    gap: 30px;
-    font-size: 24px;
-    font-weight: bold;
-    color: #ffffff;
-    margin-top: 20px;
-    margin-bottom: 20px;
+    gap: 24px;
+    padding: 40px 20px;
+    margin: 0 auto 40px;
     text-align: center;
-}
-.projetos-title{
-    font-size: 32px;
-    margin-bottom: 20px;
-    text-align: center;
-    color:#ffffff;
-}
-.proj-list{
-    text-align: left;
-    max-width: 600px;
-    margin: 0 auto;
-    color:#ffffff;
 }
 
-.proj-tech{
+.sobre {
+    min-height: 60vh;
+}
+
+.sobre-texto {
+    max-width: 680px;
+    color: #ffffff;
+}
+
+.sobre-texto h2,
+.resumo-title,
+.projetos-title {
+    font-size: clamp(2rem, 2.5vw, 3rem);
+    margin-bottom: 16px;
+    color: #ffffff;
+    font-weight: 700;
+}
+
+.resumo {
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.14);
+    border-radius: 24px;
+    padding: 36px 24px;
+    width: 100%;
+    max-width: 860px;
+}
+
+.resumo p {
+    max-width: 760px;
+    font-size: 18px;
+    line-height: 1.8;
+    text-align: justify;
+    color: #ffffff;
+    margin: 0 auto;
+}
+
+.projetos_sec {
+    width: 100%;
+    padding: 32px 20px;
+    gap: 28px;
+}
+
+.projetos-title {
+    font-size: clamp(2rem, 2.5vw, 3rem);
+    margin-bottom: 20px;
+    text-align: center;
+    color: #ffffff;
+}
+
+.projetos-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 24px;
+    width: 100%;
+}
+
+.projeto {
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 22px;
+    padding: 24px;
+    width: min(320px, 100%);
+    color: #ffffff;
+}
+
+.projeto h3 {
+    margin: 0 0 14px;
+    font-size: 1.35rem;
+}
+
+.proj-desc,
+.proj-tech {
+    margin: 0 0 16px;
+    color: #e5ecf3;
+}
+
+.proj-list {
+    text-align: left;
+    max-width: 100%;
+    margin: 0;
+    padding-left: 18px;
+    color: #ffffff;
+}
+
+.proj-tech {
     font-style: italic;
-    color:#ffffff;
+    color: #ffffff;
+}
+
+@media (max-width: 740px) {
+    .projetos-list {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .projeto {
+        width: 100%;
+    }
 }
